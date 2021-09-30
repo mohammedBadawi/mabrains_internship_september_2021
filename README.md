@@ -16,7 +16,8 @@ The internship is divided into two phases
     *  Docker
     *  Documentation
     *  Introduction to Open Source Tools training. 
-*  **phase 2**
-  This is a practical phase aims to :
+*  **phase 2**  
+  This is a practical phase aims to :  
     * Intensive Open Source Tools training and basic design phase.
-    * each one will be tasked to work on a design based on his area of interest and work on enhancing the Open Source tool suite.
+    * each one will be tasked to work on a design based on his area of interest and work on enhancing the Open Source tool suite.  
+## My Work
