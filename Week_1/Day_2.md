@@ -13,5 +13,5 @@ This is my work during the second day :
     * merge the pull requests
 
 
-![Introduction to GitHub completed](https://drive.google.com/file/d/11-MZh7npg13mhSPe0VeOIxoSSfwRCI9W/view?usp=sharing)
+![Introduction to GitHub completed](/images/introtogithub.png)
   
