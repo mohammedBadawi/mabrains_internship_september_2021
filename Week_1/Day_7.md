@@ -5,3 +5,7 @@
   * Git IDs
   * Branches
   * Merging
+
+
+
+![week2](/images/week2.png)
