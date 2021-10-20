@@ -42,3 +42,16 @@
   * rm -r : delete the directory with all directories and files included
 * **mkdir [dir_name]** : create a directory.
 * **rmdir [dir_name]** : remove the directory only if it's empty
+## Archiving and Compression
+* **gzip file / gunzip file**   : compress/decompress the file using  **_Lempel-Ziv-Markov (LZMA)_** algorithm
+* **bzip2 file / bunzip2 file** : compress/decompress the file using  **_Burrows-Wheeler_** algorithm (better compression, more cpu time)
+* **xz file / unxz file**   : compress/decompress the file using  **_Lempel-Ziv-Markov (LZMA)_** algorithm
+* **tar -c [-f ARCHIVE] [OPTIONS] [FILE...]** : archive files into one file
+  * tar -cz [-f ARCHIVE] [OPTIONS] [FILE...]  : compress the resulting file with gizp
+  * tar -cj [-f ARCHIVE] [OPTIONS] [FILE...]  : compress the resulting file with bzip2
+* **tar -t [-f ARCHIVE] [OPTIONS] [FILE...]** : list the archived files
+* **tar -x [-f ARCHIVE] [OPTIONS] [FILE...]** : extract the archived files
+  * tar -xz [-f ARCHIVE] [OPTIONS] [FILE...]** : extract the archived files after decompressing using gzip
+  * tar -xj [-f ARCHIVE] [OPTIONS] [FILE...]** : extract the archived files after decompressing using bzip2
+
+ 
