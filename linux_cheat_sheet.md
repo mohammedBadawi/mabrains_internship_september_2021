@@ -26,3 +26,19 @@
   * ls -R : recursive listing.
   * ls -S : sort by file sizes in descending order
   * ls -t : sort by file editing time starting with the most recent file.
+## Managing Files and Directories
+* **cp [source] [destination]** : copy the source file to the destination directory "only files"
+  * cp -v : vorbose option to print output showing the steps of operation
+  * cp -i : interactive options asks the user before overwriting
+  * cp -n : means no overwrite for all files
+  * cp -r : recursive copy means copy the whole directory structure. "copy files and directories"
+  * cp sourcefile destination/filename : to give the file a new name
+* **mv [source] [destination]** : remove the file from the original location and place it in the destination.
+  * Like the cp command, the mv command provides the following options: -v, -i, -n
+  * There is no -r option for mv command.
+* **touch [filename]** : create a file
+* **rm [filename]** : delete a file permanently
+  * rm -i : ask before deleting
+  * rm -r : delete the directory with all directories and files included
+* **mkdir [dir_name]** : create a directory.
+* **rmdir [dir_name]** : remove the directory only if it's empty
