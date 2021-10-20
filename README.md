@@ -22,9 +22,9 @@ The internship is divided into two phases
     * each one will be tasked to work on a design based on his area of interest and work on enhancing the Open Source tool suite.  
 ## My Work
 ### Week 1:
-  * I Learned Markdown from [**Markdown Training**](https://www.markdowntutorial.com/)
+  * I learned Markdown from [**Markdown Training**](https://www.markdowntutorial.com/)
   * I learned the basics of linux from [**Coursera Linux Basics**](https://www.coursera.org/projects/command-line-linux)
-  * learned more topics about linux from [**NDG Linux Unhatched**](https://www.netacad.com/courses/os-it/ndg-linux-unhatched)
+  * I learned more topics about linux from [**NDG Linux Unhatched**](https://www.netacad.com/courses/os-it/ndg-linux-unhatched)
   * Stared in github through [**Git Training**](https://lab.github.com/)
   * went more in depth in version control through [**Version Control with Git**](https://www.coursera.org/learn/version-control-with-git/home/welcome)
  
