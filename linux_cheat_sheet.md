@@ -4,28 +4,28 @@
   * man -f command = whatis command :  It displays man pages that match, or partially match, a specific name and provide the section number.
   * man _**sec_number**_ command : display the man page that located at the section with that number.
   * man -k _**key_word**_ : searches both the names and descriptions of the man pages for a keyword. 
-* **whereis command**  : search for the location of a command or the man pages for a command.
-* **locate file/dir**  : searches a database of all files and directories that were on the system when the database was created.
-  * locate -c file/dir : how many files match.
-  * locate -b file/dir : only includes listings that have the search term in the basename of the filename.
+* **whereis command**   : search for the location of a command or the man pages for a command.
+* **locate file/dir**   : searches a database of all files and directories that were on the system when the database was created.
+  * locate -c file/dir  : how many files match.
+  * locate -b file/dir  : only includes listings that have the search term in the basename of the filename.
   * locate -b "\file_dir: this character limits the output to filenames that exactly match the term. 
-* **info command** : displays documentation for the command in a way different to the man command.
+* **info command**   : displays documentation for the command in a way different to the man command.
 * **command --help** : provides basic information about the command.
 ## Navigating the Filesystem
 * **pwd** : prints the current directory path
 * **cd path** : change the current directory.
-  * cd ~ : go to the current user directory (/home/usrname)
-  * cd ..: got back one step in the path
-  * cd . : the current directory.
+  * cd ~  : go to the current user directory (/home/usrname)
+  * cd .. : got back one step in the path
+  * cd .  : the current directory.
 * **ls [OPTION]... [FILE]...**: list the contents of the directory
-  * \ls : to avoid using the aliasing for _**ls --color=auto**_
-  * ls -a : listing all files including the hidden files.
-  * ls -l : use the long list format.
-  * ls -h : use the human readable size format
+  * \ls      : to avoid using the aliasing for _**ls --color=auto**_
+  * ls -a    : listing all files including the hidden files.
+  * ls -l    : use the long list format.
+  * ls -h    : use the human readable size format
   * ls -l -d : show the information of the current directory without its contents.
-  * ls -R : recursive listing.
-  * ls -S : sort by file sizes in descending order
-  * ls -t : sort by file editing time starting with the most recent file.
+  * ls -R    : recursive listing.
+  * ls -S    : sort by file sizes in descending order
+  * ls -t    : sort by file editing time starting with the most recent file.
 ## Managing Files and Directories
 * **cp [source] [destination]** : copy the source file to the destination directory "only files"
   * cp -v : vorbose option to print output showing the steps of operation
@@ -45,13 +45,28 @@
 ## Archiving and Compression
 * **gzip file / gunzip file**   : compress/decompress the file using  **_Lempel-Ziv-Markov (LZMA)_** algorithm
 * **bzip2 file / bunzip2 file** : compress/decompress the file using  **_Burrows-Wheeler_** algorithm (better compression, more cpu time)
-* **xz file / unxz file**   : compress/decompress the file using  **_Lempel-Ziv-Markov (LZMA)_** algorithm
-* **tar -c [-f ARCHIVE] [OPTIONS] [FILE...]** : archive files into one file
-  * tar -cz [-f ARCHIVE] [OPTIONS] [FILE...]  : compress the resulting file with gizp
-  * tar -cj [-f ARCHIVE] [OPTIONS] [FILE...]  : compress the resulting file with bzip2
-* **tar -t [-f ARCHIVE] [OPTIONS] [FILE...]** : list the archived files
-* **tar -x [-f ARCHIVE] [OPTIONS] [FILE...]** : extract the archived files
+* **xz file / unxz file**       : compress/decompress the file using  **_Lempel-Ziv-Markov (LZMA)_** algorithm
+* **tar -c [-f ARCHIVE] [OPTIONS] [FILE...]**  : archive files into one file
+  * tar -cz [-f ARCHIVE] [OPTIONS] [FILE...]   : compress the resulting file with gizp
+  * tar -cj [-f ARCHIVE] [OPTIONS] [FILE...]   : compress the resulting file with bzip2
+* **tar -t [-f ARCHIVE] [OPTIONS] [FILE...]**  : list the archived files
+* **tar -x [-f ARCHIVE] [OPTIONS] [FILE...]**  : extract the archived files
   * tar -xz [-f ARCHIVE] [OPTIONS] [FILE...]** : extract the archived files after decompressing using gzip
   * tar -xj [-f ARCHIVE] [OPTIONS] [FILE...]** : extract the archived files after decompressing using bzip2
-
- 
+## Working With Text
+* **cat [filename]** : view the file in the std output
+* **less [filename]** : view the file using the less pager
+  * Spacebar : 	Window forward
+  * B	       : Window backward
+  * Enter    :	Line forward
+  * Q        :	Exit
+  * H        :	Help 
+* **head/tail [filename]** : view the first/last 10 lines from the file in the std output
+  * head -5    : view the first lines
+  * head -n 5  : view the first 5 lines
+  * head -n -5 : view the whole file except the last 5 lines
+  * tail -5    : view the last 5 lines
+  * tail -n -5 : view the last 5 lines
+  * tail -n 5  : view the last 5 lines
+  * tail -n +5 : view the file from the line number 5 to the end
+* **tail -f [filename]** : view the live file changes , ex: used in viewing the log files
