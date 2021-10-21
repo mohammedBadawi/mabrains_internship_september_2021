@@ -1,19 +1,19 @@
 ## Getting Help
-* **man command** : displays the manual page for the command.
+* **man [command]** : displays the manual page for the command.
   * /key word : to search the man page.
-  * man -f command = whatis command :  It displays man pages that match, or partially match, a specific name and provide the section number.
-  * man _**sec_number**_ command : display the man page that located at the section with that number.
-  * man -k _**key_word**_ : searches both the names and descriptions of the man pages for a keyword. 
-* **whereis command**   : search for the location of a command or the man pages for a command.
-* **locate file/dir**   : searches a database of all files and directories that were on the system when the database was created.
-  * locate -c file/dir  : how many files match.
-  * locate -b file/dir  : only includes listings that have the search term in the basename of the filename.
-  * locate -b "\file_dir: this character limits the output to filenames that exactly match the term. 
-* **info command**   : displays documentation for the command in a way different to the man command.
+  * man -f [command] = whatis [command] :  It displays man pages that match, or partially match, a specific name and provide the section number.
+  * man [_**sec_number**_] [command] : display the man page that located at the section with that number.
+  * man -k [_**key_word**]_ : searches both the names and descriptions of the man pages for a keyword. 
+* **whereis [command]**   : search for the location of a command or the man pages for a command.
+* **locate [file/dir]**   : searches a database of all files and directories that were on the system when the database was created.
+  * locate -c [file/dir]  : how many files match.
+  * locate -b [file/dir]  : only includes listings that have the search term in the basename of the filename.
+  * locate -b ["\file_dir]: this character limits the output to filenames that exactly match the term. 
+* **info [command]**   : displays documentation for the command in a way different to the man command.
 * **command --help** : provides basic information about the command.
 ## Navigating the Filesystem
 * **pwd** : prints the current directory path
-* **cd path** : change the current directory.
+* **cd [path]** : change the current directory.
   * cd ~  : go to the current user directory (/home/usrname)
   * cd .. : got back one step in the path
   * cd .  : the current directory.
@@ -87,3 +87,13 @@
   * wc -l : count the lines only
   * wc -w : count the words only
   * wc -c : count the bytes (characters) only
+* **cut -d[delimiter] -f[columns numbers] [file name]** : extract the columns from the file using the defined delimiter
+  * cut -d: -f1,5-7 mypasswd : extract columns number 1,5,6,7 from the mypasswd file using ':' as delimiter
+* **cut -c[characters numbers] [file name]** : extract the columns of the defined characters from the file
+  * ls -l | cut -c1-11,50- : pipline the output of the ls command to the cut command to extract the columns of the first 11 characters and from 50 to the end.
+* **grep [text] [file]** : find the linein the specified file that contain the specified text.
+  * grep -c [text] [file] : prints the number of lines that contain the specified text.
+  * grep -v [text] [file] : finds the lines that don't contain the specefied text.
+  * grep -n [text] [file] : adds the lines numbering.
+  * grep -i [text] [file] : ignores the case (capitalization) distinctions.
+  * grep -w [text] [file] : only returns lines which contain matches that form whole words.
