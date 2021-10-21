@@ -70,3 +70,20 @@
   * tail -n 5  : view the last 5 lines
   * tail -n +5 : view the file from the line number 5 to the end
 * **tail -f [filename]** : view the live file changes , ex: used in viewing the log files
+* **standard streams**
+  * STDIN  : standard input
+  * STDOUT : standard output , stream/channel #1
+  * STDERR : standard error  , stream/channel #2
+  * echo "hello" > file.txt : redirect the STDOUT stream to the file (overwrite)
+  * echo "hello" >> file.txt : redirect the STDOUT stream to the file and overwrite (append)
+  * ls /ABC 2> file.txt     : redirect the STDERR stream to the file
+  * ls /fake /etc/ppp &> all.txt : &> is used to direct both stream 1&2 to the file
+  * ls /etc /fake > output.txt 2> error.txt : direct the stream 1 to output.txt and stream 2 to error.txt
+  * tr 'a-z' 'A-Z' : tar command is used to translat a set of characters to another set of characters. In this case it's used to capitaize the word input from the STDIN.
+* **sort [file]** : sort the lines of the file in alphabetical order.
+  * sort -t: -k3 -n file.txt : -t: defines the field delimiter which is now : , -k3 means sort by the 3rd field , -n means numerical sort
+  * sort -t, -k2 -k1n -k3 -r file.txt : defines the delimiter as ',' and sort by the 2nd field then the first field numerically then the third field and use reverse order for sorting.
+* **wc file.txt** : count the number of lines,words and bytes.
+  * wc -l : count the lines only
+  * wc -w : count the words only
+  * wc -c : count the bytes (characters) only
