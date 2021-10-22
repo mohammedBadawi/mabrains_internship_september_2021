@@ -118,6 +118,14 @@
 * **free** :  view the amount of RAM in your system, including the swap space.
   * free -m : force the output to be rounded to the nearest megabyte (MB)
   * free -g : force the output to be rounded to the nearest gegabyte (GB)
+  * free -s [seconds] : Update the output every a number of seconds
 * **lspci** : view all of the devices connected by the PCI bus
 * **lsusb** : display the devices connected to the system via USB
 * **fdisk** : display information about the partitions
+# Where Data is Stored
+* **pstree** : view the processes family tree of parent and child couplings.
+* **ps** : provides a snapshot of the processes running at the instant the command is executed.
+* **top** : the top command has a dynamic, screen-based interface that regularly updates the output of running processes.
+ * press H to view the full list.
+ * press K to terminate the runaway process.
+ * press R to adjust the process priority
