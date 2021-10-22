@@ -112,3 +112,9 @@
   * myvar=$1 this means frist argument passed to the script
   * mypath=\`pwd\` this backticks is used to run the command then pass the output to the variable
   * echo $0 this prints the status of the last command , 0 means successful otherwise means failed
+## Understanding Computer Hardware
+* **arch** : view the processor architecture (64 or 32)
+* **lscpu** : view more information concerning the cpu
+* **free** :  view the amount of RAM in your system, including the swap space.
+  * free -m : force the output to be rounded to the nearest megabyte (MB)
+  * free -g : force the output to be rounded to the nearest gegabyte (GB)
