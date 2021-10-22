@@ -118,3 +118,6 @@
 * **free** :  view the amount of RAM in your system, including the swap space.
   * free -m : force the output to be rounded to the nearest megabyte (MB)
   * free -g : force the output to be rounded to the nearest gegabyte (GB)
+* **lspci** : view all of the devices connected by the PCI bus
+* **lsusb** : display the devices connected to the system via USB
+* **fdisk** : display information about the partitions
