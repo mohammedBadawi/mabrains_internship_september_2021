@@ -27,6 +27,7 @@
   * ls -S    : sort by file sizes in descending order
   * ls -t    : sort by file editing time starting with the most recent file.
 ## Managing Files and Directories
+* **#!/bin/sh** : Typed at the first line of the file to define the interpreter used
 * **cp [source] [destination]** : copy the source file to the destination directory "only files"
   * cp -v : vorbose option to print output showing the steps of operation
   * cp -i : interactive options asks the user before overwriting
@@ -97,3 +98,17 @@
   * grep -n [text] [file] : adds the lines numbering.
   * grep -i [text] [file] : ignores the case (capitalization) distinctions.
   * grep -w [text] [file] : only returns lines which contain matches that form whole words.
+  * grep -q [text] [file] : run in the quit mode (if string is found return 0 otherwise return 1) and this value is not printed. We can see it using _**echo $0**_
+## Basic Scripting
+* **nano editor commands**
+  * Ctrl + W	search the document
+  * Ctrl + W, then Control + R	search and replace
+  * Ctrl + G	show all the commands possible
+  * Ctrl + Y/V	page up / down
+  * Ctrl + C	show the current position in the file and the file’s size
+* **Variables**
+  * myvar="Hello"
+  * echo $myvar prints the value of the variable
+  * myvar=$1 this means frist argument passed to the script
+  * mypath=\`pwd\` this backticks is used to run the command then pass the output to the variable
+  * echo $0 this prints the status of the last command , 0 means successful otherwise means failed
