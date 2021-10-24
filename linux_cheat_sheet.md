@@ -152,3 +152,10 @@
 * **ssh** : allows you to connect to another machine across the network, log in and then perform tasks on the remote machine.
   * ssh [username@hostname] : to connect using a different username from the one you currently using.
   * exit : to return to the local machine
+## System and User Security
+* **su [options] [username]** : allows you to run a shell as a different user (switching to the root user, switch to other users as well).
+  * If the username is not specified, the su command login to the root by default. so, all the following commands are equivalent
+    * su -
+    * su -l
+    * su --login
+    * su - root
