@@ -159,3 +159,10 @@
     * su -l
     * su --login
     * su - root
+* **sudo [options] command** : It allows users to execute commands as another user. Similar to the su command, the root user is assumed by default.
+* **id [options] username**  : used to print user and group information for a specified user.
+  * id -g : To print only the user's primary group.
+  * id -G : To print all the groups that a user belongs to.
+* **who** : displays a list of users who are currently logged into the system
+* **w**:  provides a more detailed list about the users currently on the system than the who command. It also provides a summary of the system status.
+* **last** : reads the entire login history from the /var/log/wtmp file and displays all logins and reboot records by default.
