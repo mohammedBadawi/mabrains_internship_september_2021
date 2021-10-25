@@ -212,3 +212,23 @@
   * usermod -U [user_name] : unlock the user account.
 * **userdel [user_name]** : delete the user account without deleting its home directory, mail spool or files.
   * userdel -r [user_name] : delete the user account and his home, mail spool, and files
+## Special Directories and Files
+* **setuid** : setuid permission is set on an executable binary file (a program) the binary file is run as the owner of the file, not as the user who executed it.
+  * chmod u+s file : to add setuid permission symbolically.
+  * To add the setuid permission numerically, add 4000 to the file's existing permissions 
+  * chmod u-s file : to remove setuid permission symbolically.
+  * To remove the setuid permission numerically, subtract 4000 from the file's existing permissions.
+* **setfig on the files** : it allows a user to run an executable binary file in a manner that provides them additional (temporary) group access. The system allows the user running the command to effectively belong to the group that owns the file, but only in the setgid program.
+* **setfig on the directories** : the setgid permission causes files created in the directory to be owned by the group that owns the directory automatically, not the primary group of the file owner.
+  * chmod g+s <file|directory> : to add setgid symbolically.
+  * To add the setgid permission numerically, add 2000 to the file's existing permissions
+  * chmod g-s <file|directory> : to remove the setgid permission symbolically.
+  * To remove the setgid permission numerically, subtract 2000 to the file's existing permissions.
+* **sticky bit** : The sticky bit permission is used to prevent other users from deleting files that they do not own in a shared directory.
+  * chmod o+t <directory> : to add the stick bit permission symbolically.
+  * To add the sticky bit permission numerically, add 1000 to the file's existing permissions.
+  * chmod o-t <directory> : to remove the stick bit permission symbolically.
+  * To remove the sticky bit permission numerically, subtract 1000 to the file's existing permissions.
+* **ls -i** : displays the inode number of a file.
+ 
+ 
