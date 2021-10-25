@@ -230,5 +230,7 @@
   * chmod o-t <directory> : to remove the stick bit permission symbolically.
   * To remove the sticky bit permission numerically, subtract 1000 to the file's existing permissions.
 * **ls -i** : displays the inode number of a file.
- 
+* **ln [target file] [link file]** : to create a hard link to an existing file (a file that holds the same inode number).
+* **ln -s target link_name** : to create a symbolic link.
+* **find / -inum [inum]** : to search for files that have the same inum (hard links).
  
