@@ -185,4 +185,30 @@
   * useradd -D -e [no. days] : to change the default expiration date of the account.
   * useradd -D -s [shell path] : to use a different login shell than the default when creating a new user account.
   * useradd -D -k [skeleton directory] : to use a different SKEL directory than the default when creating a new user account.
- 
+
+* **useradd [user_name]** : creats a new user account.
+  * useradd -u [UID] [user_name]  : allows you to specify the UID number. (above 1000 and not nfsnobody (65534)).
+  * useradd -g [primary group name or ID] [user_name]  : specify the user's primary group
+  * useradd -G [sub groups id list] [user_name]  : specify the user's supplementary groups
+  * useradd -b [base-directory] [user_name]  : specify a different base directory under which the user's home directory is created.
+  * useradd -M [user_name] : tell the command not to make a home directory even if CREATE_HOME is set to yes in the /etc/login.defs file.
+  * useradd -m [home_directory] [user_name]  : used to make the home directory.
+  * useradd -d [home_directory] [user_name]  : used to specify existing or new home directory.
+  * useradd -mK [skeleton directory] [user_name]  : specify a new skeleton directory rather that /etc/skel.
+  * useradd -s [bash directory] [user_name] : specify another login shell.
+  * useradd -c [comment] [user_name] : specify a value for the General Electric Comprehensive Operating System (GECOS) field.
+* **usermod** : modify an existing user account information.
+  * usermod -c [comment] [user_name] : Sets the value of the GECOS or comment field to COMMENT.
+  * usermod -d [HOME_DIR] [user_name] : Sets HOME_DIR as a new home directory for the user.
+  * usermod -E [EXPIRE_DATE] [user_name] : Set account expiration date to EXPIRE_DATE.
+  * usermod -f [INACTIVE] [user_name] : Set account to permit login for INACTIVE days after password expires.
+  * usermod -g [GROUP] [user_name] : Set GROUP as the primary group.
+  * usermod -G [GROUPS] [user_name] : Set supplementary groups to a list specified in GROUPS.
+  * usermod -a [user_name] : Append the user's supplemental groups with those specified by the -G option.
+  * usermod -l [NEW_LOGIN] [user_name] : change the user's login name
+  * usermod -L [user_name] : lock the user account.
+  * usermod -s [SHELL] [user_name] : Specify the login shell for the account.
+  * usermod -u [NEW_UID] [user_name] : Specify the user's UID to be NEW_UID.
+  * usermod -U [user_name] : unlock the user account.
+* **userdel [user_name]** : delete the user account without deleting its home directory, mail spool or files.
+  * userdel -r [user_name] : delete the user account and his home, mail spool, and files
