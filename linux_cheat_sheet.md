@@ -166,3 +166,10 @@
 * **who** : displays a list of users who are currently logged into the system
 * **w**:  provides a more detailed list about the users currently on the system than the who command. It also provides a summary of the system status.
 * **last** : reads the entire login history from the /var/log/wtmp file and displays all logins and reboot records by default.
+## Creating Users and Groups
+* **groupadd [group_name]** : executed by the root user to create a group.
+  * gropuadd -g[GID] [group_name] : to specify a group id, otherwise the command will automaticallu specify GID by looking at **/etc/group** and choose a number higher by one that the highest GID.
+  * groupadd -r [group_name] : assigns the GID to a number lower than the standard (1000 for debian , 500 for redhat).
+* **groupmod** : groupmod command can be used to either change the group name or GID.
+  * groupmod -n [new_name] [old_name] : change the group name. (will not affect the group members or the files access as the system define them by th GID).
+  * groupmod -g [new_GID] [group_name] : change the GID. (all members and files that were associated with that group will no longer be associated with that group.)
