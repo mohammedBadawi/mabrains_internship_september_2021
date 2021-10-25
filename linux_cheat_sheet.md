@@ -172,4 +172,17 @@
   * groupadd -r [group_name] : assigns the GID to a number lower than the standard (1000 for debian , 500 for redhat).
 * **groupmod** : groupmod command can be used to either change the group name or GID.
   * groupmod -n [new_name] [old_name] : change the group name. (will not affect the group members or the files access as the system define them by th GID).
-  * groupmod -g [new_GID] [group_name] : change the GID. (all members and files that were associated with that group will no longer be associated with that group.)
+  * groupmod -g [new_GID] [group_name] : change the GID. (all members and files that were associated with that group will no longer be associated with that group.Instead, these files will be owned by a GID only).
+  * find / -nogroup : To search for all files that are owned by just a GID (not associated with a group name) use the -nogroup option of the find command.
+* **groupdel [group_name]** : delete the group. Only supplemental groups can be deleted, so if any group that is the primary group for any user, it cannot be deleted.
+* **To change the default values regarding creating a new user we have two options**
+   1. Manipulate the **etc/default/useradd** file
+   2. To use the **useradd** command with **-D** option. and this is the recommended method.
+* **useradd -D** : View the default values of the /etc/default/useradd file.
+  * useradd -D -g [primary group id] : in distributions that don't set the UPG to the UID and put a default value, we can change that value.
+  * useradd -D -b [home address] : to use a different base directory group than the default when creating a new user account.
+  * useradd -D -f [no. days] :  to use a different INACTIVE value (number of days after the pass expires that the account is disabled).
+  * useradd -D -e [no. days] : to change the default expiration date of the account.
+  * useradd -D -s [shell path] : to use a different login shell than the default when creating a new user account.
+  * useradd -D -k [skeleton directory] : to use a different SKEL directory than the default when creating a new user account.
+ 
