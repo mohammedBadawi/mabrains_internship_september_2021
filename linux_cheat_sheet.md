@@ -211,7 +211,29 @@
   * usermod -u [NEW_UID] [user_name] : Specify the user's UID to be NEW_UID.
   * usermod -U [user_name] : unlock the user account.
 * **userdel [user_name]** : delete the user account without deleting its home directory, mail spool or files.
-  * userdel -r [user_name] : delete the user account and his home, mail spool, and files
+  * userdel -r [user_name] : delete the user account and his home, mail spool, and files.
+## Ownership and Permission
+* **id** : displays the UID and user account name of the current user followed by the GID and group name of the primary group and the GIDs and group names of all group memberships.
+* **newgrp [grp_name]** : change your current primary group to change the group owner of the file that you will create.
+  * exit : to close the shell of the newgrp command and go back to your original primary group.
+* **groups** : show the groups ypu are belong to.
+* **usermod -g groupname username** : To change the user group permanentally.
+* **chgrp [group_name] [file_name]** : to change the owner group of an existing file to another group.(the root user can change to any group, but any user chnage to only the groups that he belongs to)
+  * chgrp -r : to change the owner group of all the files in a directory structure.
+* **chown user /path/to/file** : to change the user owner of a file.
+  * chown user:group /path/to/file : chnage the user and group owner (only the root user can do this).
+  * chown :group /path/to/file : to chnage the ower group (only the root user can do this).
+* **chmod new_permission file_name** : change permissions on files and directories.
+  * u	user owner
+  * g	group owner
+  * o	others
+  * a	all (user owner, group owner, and others)
+    * (+)	add
+    * (-)	remove
+    * (=)	equals
+      * r	read
+      * w	write
+      * x	execute
 ## Special Directories and Files
 * **setuid** : setuid permission is set on an executable binary file (a program) the binary file is run as the owner of the file, not as the user who executed it.
   * chmod u+s file : to add setuid permission symbolically.
