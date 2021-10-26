@@ -28,4 +28,8 @@ The internship is divided into two phases
   * Stared in github through [**Git Training**](https://lab.github.com/)
   * went more in depth in version control through [**Version Control with Git**](https://www.coursera.org/learn/version-control-with-git/home/welcome)
  
+ ## Certificates
+ ![Version Control with Git](images/certf.png)
+ ![linux_unhatched](https://github.com/mohammedBadawi/mabrains_internship_september_2021/blob/main/images/certificate.png)
+ ![linux_essentials](https://github.com/mohammedBadawi/mabrains_internship_september_2021/blob/main/images/linux_essentials.png)
 
