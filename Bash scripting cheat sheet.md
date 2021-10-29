@@ -53,3 +53,19 @@
 * $(5/2) : it prints 2 not 2.5
 * echo "5/2" | bc -l : The bc command with -l option -which includes the math library- prints the floating point.
 * var=$(echo "scale=2;10/4" | bc -l) : Scale is used to dispaly the output in two decimal points
+## String Operations in Bash
+* **${#string}** : Get string length
+* **string3=$string1$string2** : Concatenating two strings
+* **expr index "$string3" "$string2"** : find the index of the first match from string2 in string3
+* **${string:start_index:length}** : Extract substrings from a string.
+  * ${string:start_index} : Extract the substring starting from the index to the end of the string.
+  * ${string::length} : Extract the substring starting from the index 0 and with the specified length.
+* **${string/old_char/new_char}** : Replace the first occurence of the old_char by the new_char.
+  * ${string//old_char/new_char} : Replace every old_char by the new_char.
+  * ${string//old_char} : Remove all the old_char from the string.
+* **${string^^}** : Capitalize all the characters of the string.
+  * ${string^} : Capitalize the first character of the string.
+  * ${string^^[abc...]} : Capitalize specified characters from the string.
+* **${string,,}** : lowercase all the characters of the string.
+  * ${string,} : lowercase the first character of the string.
+  * ${string,,[abc...]} : lowercase specified characters from the string.
