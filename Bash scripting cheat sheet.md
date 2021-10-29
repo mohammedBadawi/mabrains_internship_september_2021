@@ -69,3 +69,25 @@
 * **${string,,}** : lowercase all the characters of the string.
   * ${string,} : lowercase the first character of the string.
   * ${string,,[abc...]} : lowercase specified characters from the string.
+## Decision Making in Bash
+### if statement in bash
+* **if [ condition ]; then  
+     body1  
+    elif [ condition ]; then  
+     body2  
+    else  
+     body3  
+    fi**
+### case statement in bash
+* **case "variable" in  
+	     "pattern1" )  
+		  Command … ;;  
+	     "pattern2" )  
+		  Command … ;;  
+	     "pattern2" )  
+		  Command … ;;  
+    esac**
+## Get all the test conditions in Bash
+* **man test** : man page contains the test conditions.
+  * -z $STRING1 :	$STRING1 is empty or null. (**empty string : *string1=""* , null string : *string1***)
+  * -n $STRING1	$STRING1 is not empty.
