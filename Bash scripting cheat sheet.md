@@ -91,3 +91,26 @@
 * **man test** : man page contains the test conditions.
   * -z $STRING1 :	$STRING1 is empty or null. (**empty string : *string1=""* , null string : *string1***)
   * -n $STRING1	$STRING1 is not empty.
+## Loops in Bash
+### For loop
+* **for ((initialize ; condition ; increment)); do  
+	[COMMANDS]  
+     done**  
+     
+* **for item in [LIST]; do  
+	[COMMANDS]  
+    done**  
+    
+  * for i in {1..10} : a counter from 1 to 10
+  * for i in /Desktop/* : to loop on all files and directories
+### While loops
+* **while [ condition ]; do  
+	[COMMANDS]  
+    done**    
+### Until loops
+* **until [ condition ]; do  
+    	[commands]  
+    done**  
+
+	
+		
