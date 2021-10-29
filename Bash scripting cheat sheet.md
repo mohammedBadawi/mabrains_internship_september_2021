@@ -24,7 +24,7 @@
 
 ## Command substitutions
 * **DATE=$(date)** : will pass the date command to the shell then takes the ouput from the STDOUT and assign it to the variable DATE.
-* **DATE=`date`** : The back ticks is the same as $(command), but it's an old style.
+* **DATE=\`date\`** : The back ticks is the same as $(command), but it's an old style.
 ## Passing arguments to a bash shell script
 * **no_lines=$(wc -l < $1)** : This line will take the first argument passed to the script and find the number of lines in it.
 * **find / -iname $1 2> /dev/null** : this command will search for the name passed as argument and direct the stream 2 to the /dev/null file.
