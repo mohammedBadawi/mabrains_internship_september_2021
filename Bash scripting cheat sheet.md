@@ -112,5 +112,21 @@
     	[commands]  
     done**  
 
-	
-		
+## Functions in Bash
+* **function *function_name* ()  
+    {  
+    	[Function Body]  
+    }**  
+  
+* **function_name ()  
+     {  
+     	[funciton body]
+     }**
+* In bash, functions don't return values but we can return a number as exit status then we read it by $?. (walk around)
+* **varA=1  
+    varB=2  
+    function_name ()    
+     {  
+     	local varA=5  #This will not overwrite the global variable  
+	varB=5        #This will overwrite the global variable  
+     }**    
